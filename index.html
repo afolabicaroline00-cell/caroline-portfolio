@@ -1,0 +1,1670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caroline Olamojiba Afolabi · Epidemiology Research</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f2f7fc;
+      color: #1a2c3b;
+      line-height: 1.6;
+    }
+    .site-header {
+      background: linear-gradient(145deg, #003b6f, #00509e);
+      padding: 1.8rem 2rem 1rem;
+      color: white;
+      box-shadow: 0 6px 20px rgba(0, 40, 80, 0.25);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .header-top {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo h1 {
+      font-size: 1.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .logo h1 i {
+      margin-right: 8px;
+      color: #8fcbff;
+    }
+    .logo .tagline {
+      font-size: 0.9rem;
+      opacity: 0.85;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+    .main-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.8rem;
+      margin-top: 0.5rem;
+    }
+
+    .contact-grid {
+     grid-template-columns: 1fr;
+    }
+
+  .contact-cta {
+  flex-direction: column;
+  text-align: center;
+  }
+
+ .contact-location {
+  align-items: flex-start;
+   }
+   .avatar-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  transform: translateY(-80px);
+  border: 5px solid #ffffff;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  background: #f1f5f7;
+}
+
+.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+    .main-nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.4rem 1.2rem;
+      border-radius: 40px;
+      border: 1.5px solid rgba(255,255,255,0.5);
+      transition: 0.2s;
+      font-size: 0.95rem;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(2px);
+    }
+    .main-nav a i {
+      margin-right: 6px;
+    }
+    .main-nav a:hover,
+    .main-nav a.active {
+      background: white;
+      color: #003b6f;
+      border-color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+    .page-container {
+      max-width: 1280px;
+      margin: 2rem auto;
+      padding: 0 1.8rem;
+    }
+    .page-section {
+      display: none;
+      animation: fadeUp 0.3s ease;
+    }
+    .page-section.active-page {
+      display: block;
+    }
+    .contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.contact-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  background: #f7faff;
+  border: 1px solid #dce8f2;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease;
+}
+
+.contact-card:hover {
+  background: white;
+  transform: translateY(-4px);
+  border-color: #0077be;
+  box-shadow: 0 8px 20px rgba(0, 60, 120, 0.1);
+}
+
+.contact-icon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 14px;
+  background: #e3f0fa;
+  color: #003b6f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+.contact-icon.linkedin {
+  background: #e8f2fb;
+  color: #0077b5;
+}
+
+.contact-icon.twitter {
+  background: #eef3f5;
+  color: #111;
+}
+
+.contact-icon.scholar {
+  background: #eaf2fb;
+  color: #4285f4;
+}
+
+.contact-icon.researchgate {
+  background: #e5f6f4;
+  color: #00a99d;
+}
+
+.contact-icon.orcid-icon {
+  background: #eef7e4;
+  color: #a6ce39;
+}
+
+.contact-card h4 {
+  color: #003b6f;
+  margin-bottom: 0.15rem;
+  font-size: 0.98rem;
+}
+
+.contact-card p {
+  color: #526b7d;
+  font-size: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-card span {
+  color: #0077be;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.contact-location {
+  margin-top: 2rem;
+  padding: 1.3rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f4f8fb;
+  border-left: 5px solid #003b6f;
+  border-radius: 14px;
+}
+
+.contact-location > div:first-child {
+  font-size: 1.7rem;
+  color: #0077be;
+}
+
+.contact-location h3 {
+  color: #003b6f;
+  margin-bottom: 0.15rem;
+}
+
+.contact-location p {
+  color: #1e3a4f;
+  margin-bottom: 0.1rem;
+}
+
+.contact-location span {
+  color: #6a8091;
+  font-size: 0.8rem;
+}
+
+.contact-cta {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: linear-gradient(135deg, #e9f4fc, #f7fbff);
+  border-radius: 20px;
+  border: 1px solid #d5e7f4;
+}
+
+.contact-cta-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 50%;
+  background: #003b6f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.contact-cta h3 {
+  color: #003b6f;
+  margin-bottom: 0.4rem;
+}
+
+.contact-cta p {
+  color: #526b7d;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.contact-button {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  background: #003b6f;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.contact-button:hover {
+  background: #0077be;
+  transform: translateY(-2px);
+}
+    @keyframes fadeUp {
+      0% { opacity: 0.3; transform: translateY(12px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .card-panel {
+      background: white;
+      border-radius: 28px;
+      padding: 2.2rem 2rem;
+      box-shadow: 0 10px 30px rgba(0, 40, 80, 0.06);
+      margin-bottom: 2.5rem;
+      border: 1px solid rgba(0, 119, 190, 0.06);
+    }
+    .section-title {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: #003b6f;
+      margin-bottom: 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .section-title i {
+      color: #0077be;
+      font-size: 2rem;
+    }
+    .section-title::after {
+      content: '';
+      flex: 1;
+      height: 3px;
+      background: linear-gradient(90deg, #0077be, transparent);
+      margin-left: 12px;
+    }
+    .hero-grid {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .hero-text {
+      flex: 2;
+      min-width: 260px;
+    }
+    .hero-text h2 {
+      font-size: 2.5rem;
+      color: #003b6f;
+    }
+    .hero-text p {
+      font-size: 1.2rem;
+      margin: 1.2rem 0;
+      color: #1e3a4f;
+      max-width: 700px;
+    }
+    .hero-avatar {
+      flex: 0 0 160px;
+      text-align: center;
+    }
+    .hero-avatar .avatar-circle {
+      width: 250px;
+      height: 250px;
+      background: #d9e6f2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      color: #003b6f;
+      border: 6px solid white;
+      box-shadow: 0 8px 25px rgba(0,60,120,0.15);
+    }
+    .quick-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin: 1.8rem 0;
+    }
+    .quick-stats div {
+      background: #e9f2fa;
+      padding: 0.5rem 1.6rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .quick-stats i {
+      color: #0077be;
+      margin-right: 8px;
+    }
+    .contact-badge {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.5rem;
+      background: #e9f2fa;
+      padding: 1rem 1.8rem;
+      border-radius: 60px;
+      margin-top: 1rem;
+    }
+    .contact-badge span {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+    }
+    .contact-badge i {
+      color: #003b6f;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .info-item {
+      background: #f7faff;
+      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+      border-left: 4px solid #0077be;
+    }
+    .info-item h4 {
+      color: #003b6f;
+      margin-bottom: 0.3rem;
+    }
+    .info-item p {
+      color: #1e3a4f;
+      font-size: 0.95rem;
+    }
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1rem;
+    }
+    .cert-item {
+      background: #f0f8ff;
+      padding: 1.2rem 1rem;
+      border-radius: 20px;
+      text-align: center;
+      border: 1px solid #d4e6f5;
+      transition: 0.2s;
+    }
+    .cert-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,60,120,0.08);
+      background: white;
+    }
+    .cert-item i {
+      font-size: 2rem;
+      color: #003b6f;
+      margin-bottom: 0.3rem;
+    }
+    .cert-item h4 {
+      color: #003b6f;
+      font-size: 0.95rem;
+      margin: 0.2rem 0;
+    }
+    .cert-item p {
+      font-size: 0.8rem;
+      color: #2b4b63;
+    }
+    .cv-download {
+      margin: 2rem 0 0.5rem;
+      text-align: center;
+    }
+    .cv-download a {
+      background: #003b6f;
+      color: white;
+      padding: 0.8rem 2.8rem;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: 0.2s;
+      border: 1px solid #003b6f;
+    }
+    .cv-download a i {
+      margin-right: 10px;
+    }
+    .cv-download a:hover {
+      background: #0056a3;
+      transform: scale(1.02);
+      box-shadow: 0 10px 24px rgba(0,59,111,0.25);
+    }
+    .research-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .research-item {
+      background: #f7faff;
+      padding: 1.2rem 1.8rem;
+      border-radius: 20px;
+      border-left: 6px solid #0077be;
+      transition: 0.15s;
+    }
+    .research-item:hover {
+      background: white;
+      box-shadow: 0 4px 14px rgba(0,60,120,0.06);
+    }
+    .research-item h4 {
+      color: #003b6f;
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+    }
+    .research-item .meta {
+      font-size: 0.85rem;
+      color: #3f647f;
+      margin: 0.2rem 0 0.4rem;
+    }
+    .research-item .meta i {
+      margin-right: 6px;
+    }
+    .research-item p {
+      color: #1e3a4f;
+      font-size: 0.95rem;
+    }
+    .badge-status {
+      display: inline-block;
+      padding: 0.15rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      margin-left: 8px;
+    }
+    .badge-published { background: #d4edda; color: #155724; }
+    .badge-review { background: #fff3cd; color: #856404; }
+    .badge-prep { background: #cce5ff; color: #004085; }
+    .badge-unpub { background: #f8d7da; color: #721c24; }
+    .badge-preprint { background: #d1ecf1; color: #0c5460; }
+    .news-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+    .news-card {
+      background: #f9fcff;
+      border-radius: 20px;
+      padding: 1.2rem 1.8rem;
+      border: 1px solid #dce8f2;
+      transition: 0.15s;
+    }
+    .news-card:hover {
+      background: white;
+      border-color: #b3d6f0;
+    }
+    .news-card .date {
+      font-size: 0.85rem;
+      color: #0077be;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .news-card h4 {
+      color: #003b6f;
+      margin: 0.3rem 0;
+      font-size: 1.05rem;
+    }
+    .news-card p {
+      color: #1e3a4f;
+      font-size: 0.95rem;
+    }
+    .skill-tag {
+      display: inline-block;
+      background: #003b6f;
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      margin: 0.15rem 0.25rem;
+    }
+    .skill-tag.light {
+      background: #e9f2fa;
+      color: #003b6f;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .two-col { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      .header-top { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .hero-text h2 { font-size: 1.9rem; }
+      .section-title { font-size: 1.7rem; }
+      .page-container { padding: 0 1rem; }
+      .card-panel { padding: 1.5rem 1.2rem; }
+    }
+    .site-footer {
+      background: #003b6f;
+      color: rgba(255,255,255,0.9);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+      border-top: 3px solid #0077be;
+    }
+    .site-footer i {
+      color: #8fcbff;
+      margin: 0 6px;
+    }
+    .orcid {
+      color: #a6ce39;
+    }
+    .highlight-box {
+      background: #e3f0fa;
+      padding: 1.2rem 1.8rem;
+      border-radius: 16px;
+      border-left: 4px solid #003b6f;
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-top">
+    <div class="logo">
+      <h1><i class="fas fa-microscope"></i> Caroline Afolabi</h1>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="#" class="active" data-page="home"><i class="fas fa-home"></i> Home</a>
+      <a href="#" data-page="certificates"><i class="fas fa-certificate"></i> Cert & CV</a>
+      <a href="#" data-page="research"><i class="fas fa-dna"></i> Research</a>
+      <a href="#" data-page="publications"><i class="fas fa-dna"></i> Publications</a>
+      <a href="#" data-page="contact"><i class="fas fa-address-card"></i> Contact</a>
+      <a href="#" data-page="updates"><i class="fas fa-newspaper"></i> Updates</a>
+    </nav>
+  </div>
+</header>
+
+<div class="page-container">
+
+  <!-- ================= HOME PAGE ================= -->
+  <section id="page-home" class="page-section active-page">
+    <div class="card-panel">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h2>Caroline Olamojiba Afolabi</h2>
+          <p><i class="fas fa-quote-left" style="opacity:0.3; margin-right:8px;"></i>A research-driven Epidemiology with a strong academic foundation and extensive hands-on experience in microbiological and clinical research, committed to advancing evidence-based solutions to pressing health challenges. Skilled in scientific inquiry, critical analysis, and problem-solving, with a growing focus on applied health research and the translation of research evidence into meaningful health outcomes. Research interests include understanding determinants of health, identifying barriers to healthcare access, and generating actionable evidence to inform clinical practice, health policy, and effective public health interventions.
+</p>
+
+          <div class="quick-stats">
+            <div><i class="fas fa-graduation-cap"></i> B.Sc. Microbiology (First Class)</div>
+            <div><i class="fas fa-graduation-cap"></i> M.Sc. Epidemiology</div>
+            <div><i class="fas fa-certificate"></i> 4 Certifications</div>
+            <div><i class="fas fa-book"></i> 7+ Publications</div>
+          </div>
+
+        </div>
+        <div class="hero-avatar">
+          <div class="avatar-circle">
+          <img src="caroline.jpg" alt="Caroline" class="avatar-image">
+         </div>
+          <p style="font-size:0.9rem; margin-top:0.6rem; color:#1e3a4f;">
+         <i class="fas fa-map-pin"></i> Ogijo, Ogun State, NG<br>
+      </p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CERTIFICATES & CV PAGE ================= -->
+  <section id="page-certificates" class="page-section">
+    <div class="card-panel">
+      <h2 class="section-title"><i class="fas fa-certificate"></i> Certificates &amp; Credentials</h2>
+      <div class="cert-grid">
+
+  <!-- Certificate 1 -->
+  <div class="cert-item">
+    <i class="fas fa-medal"></i>
+    <h4>Epidemiology 101</h4>
+    <p>Johns Hopkins (Coursera)</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 2 -->
+  <div class="cert-item">
+    <i class="fas fa-microscope"></i>
+    <h4>AMR Surveillance</h4>
+    <p>WHO OpenWHO</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 3 -->
+  <div class="cert-item">
+    <i class="fas fa-database"></i>
+    <h4>Data Science for Public Health</h4>
+    <p>HarvardX</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 4 -->
+  <div class="cert-item">
+    <i class="fas fa-chart-pie"></i>
+    <h4>R for Health Research</h4>
+    <p>Imperial College</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 5 -->
+  <div class="cert-item">
+    <i class="fas fa-globe"></i>
+    <h4>Global Health Diplomacy</h4>
+    <p>LSHTM</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 6 -->
+  <div class="cert-item">
+    <i class="fas fa-vial"></i>
+    <h4>Laboratory Biosafety</h4>
+    <p>CDC</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 7 -->
+  <div class="cert-item">
+    <i class="fas fa-virus"></i>
+    <h4>COVID-19 Origins Meta-analysis</h4>
+    <p>medRxiv (2025)</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 8 -->
+  <div class="cert-item">
+    <i class="fas fa-book-open"></i>
+    <h4>Microbial Quality of Herbs</h4>
+    <p>BSc Thesis, FUNAAB</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 9 -->
+  <div class="cert-item">
+    <i class="fas fa-soap"></i>
+    <h4>Disinfectant Production</h4>
+    <p>Smile Ventures 1 Global Ltd</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+
+  <!-- Certificate 10 -->
+  <div class="cert-item">
+    <i class="fas fa-utensils"></i>
+    <h4>Professional Catering</h4>
+    <p>Precious Mary Event Management</p>
+    <a href="YOUR_CERTIFICATE_LINK_HERE"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="certificate-link">
+      <i class="fas fa-external-link-alt"></i> View Certificate
+    </a>
+  </div>
+  </div>
+
+    <!-- Skills -->
+    <div class="card-panel">
+      <h2 class="section-title"><i class="fas fa-tools"></i> Technical Skills</h2>
+      
+      <h4 style="color:#003b6f; margin: 1rem 0 0.5rem;">Software & Programming</h4>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+        <span class="skill-tag">R Programming</span>
+        <span class="skill-tag">SPSS</span>
+        <span class="skill-tag">Microsoft Word</span>
+        <span class="skill-tag">Microsoft Excel</span>
+        <span class="skill-tag">Microsoft PowerPoint</span>
+        <span class="skill-tag">Microsoft Access</span>
+      </div>
+
+      <h4 style="color:#003b6f; margin: 1rem 0 0.5rem;">Bioinformatics Tools</h4>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+        <span class="skill-tag">CARD Database</span>
+        <span class="skill-tag">VFDB</span>
+        <span class="skill-tag">MEGA</span>
+        <span class="skill-tag">BLAST</span>
+        <span class="skill-tag">NCBI Database</span>
+      </div>
+
+      <h4 style="color:#003b6f; margin: 1rem 0 0.5rem;">Laboratory Techniques</h4>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+        <span class="skill-tag">Biochemical Assays</span>
+        <span class="skill-tag">Antimicrobial Susceptibility Testing</span>
+        <span class="skill-tag">PCV Testing</span>
+        <span class="skill-tag">Culturing</span>
+        <span class="skill-tag">Sample Collection</span>
+        <span class="skill-tag">RDT Testing</span>
+      </div>
+
+      <h4 style="color:#003b6f; margin: 1rem 0 0.5rem;">Languages</h4>
+      <div style="display: flex; flex-wrap: wrap; gap: 0.4rem;">
+        <span class="skill-tag light">English (Professional Proficiency)</span>
+        <span class="skill-tag light">Yoruba (Native)</span>
+      </div>
+    </div>
+    <div class="cv-download">
+        <a href="#"><i class="fas fa-file-pdf"></i> Download Full CV (PDF)</a>
+        </p>
+      </div>
+  </section>
+
+  <!-- ================= RESEARCH PAGE ================= -->
+  <section id="page-research" class="page-section">
+    <!-- Research Experience -->
+    <div class="card-panel">
+      <h2 class="section-title"><i class="fas fa-flask"></i> Research Experience</h2>
+      
+      <div style="margin-bottom: 2rem;">
+        <h3 style="color:#003b6f; margin-bottom: 0.5rem;"><i class="fas fa-hospital"></i> Student Industrial Training (2022–2023)</h3>
+        <div class="highlight-box">
+          <p><strong>Veterinary Teaching Hospital, FUNAAB, Ogun State, Nigeria</strong></p>
+          <ul style="margin: 0.5rem 0 0 1.2rem;">
+            <li>Assisted final year undergraduate and master's students in microbiology research projects at College of Veterinary Microbiology Laboratory</li>
+            <li>Evaluated antimicrobial activity of crude extract of <em>Vernonia amygdalina</em> against <em>Salmonella</em> isolated from household cockroaches</li>
+            <li>Participated in antibacterial susceptibility testing and isolation of <em>S. aureus</em> from a pus sample of a West African dwarf sheep suffering from mastitis</li>
+            <li>Proficient in performing PCV (packed cell volume) tests, enhancing research capabilities</li>
+            <li>Conducted laboratory procedures including biochemical assays and culturing under senior researcher supervision</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 2rem;">
+        <h3 style="color:#003b6f; margin-bottom: 0.5rem;"><i class="fas fa-user-md"></i> Medical Laboratory Assistant (2025)</h3>
+        <div class="highlight-box">
+          <p><strong>NYSC Orientation Camp – Batch A, Stream 2, Ebonyi State, Nigeria</strong></p>
+          <ul style="margin: 0.5rem 0 0 1.2rem;">
+            <li>Part of camp medical team providing diagnostic support for corps members requiring medical attention</li>
+            <li>Assisted laboratory scientist in conducting point-of-care rapid diagnostic tests including: Malaria RDT, HIV, Hepatitis B & C, Syphilis tests, Urinalysis, Pregnancy tests, Random and fasting blood glucose tests</li>
+            <li>Participated in sample collection, test preparation, and result documentation</li>
+            <li>Supported infection prevention and control (IPC) measures and daily lab maintenance</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 0.5rem;">
+        <h3 style="color:#003b6f; margin-bottom: 0.5rem;"><i class="fas fa-star"></i> Kolabtree – Top Rated Freelancer (Present)</h3>
+        <div class="highlight-box">
+          <ul style="margin: 0.5rem 0 0 1.2rem;">
+            <li>Metataxonomic Analysis of 24 Pulmonary <em>Metamycoplasma salivarium</em> sequence variants from Saudi Arabia</li>
+            <li>Analysis of 63 <em>Klebsiella pneumoniae</em></li>
+            <li>Analysis of 118 <em>Prevotella oris</em></li>
+            <li>Formations of a research paper on advancements in exotic game genetics</li>
+            <li>Wrote a biology paper on plant biotechnology</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Teaching Experience -->
+    <div class="card-panel">
+      <h2 class="section-title"><i class="fas fa-chalkboard-teacher"></i> Teaching Experience</h2>
+      <div class="highlight-box">
+        <p><strong>Subject Teacher:</strong> Taught Mathematics in junior school and Biology in Senior High School</p>
+        <p><strong>Mentorship:</strong> Mentored students in preparation for Internal and External examinations including BECE, WAEC, and GCE</p>
+        <p><strong>Other Responsibilities:</strong> Administrating and designing assignments, homework, and assessments ensuring fair allocation and grading; Contributing to implementing school policies and regulation; Governing student conduct and well-being</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATION PAGE ================= -->
+<section id="page-publication" class="page-section">
+
+  <div class="card-panel">
+
+    <!-- Page Header -->
+    <div style="margin-bottom: 1.5rem;">
+      <h2 class="section-title">
+        <i class="fas fa-book-open"></i> Publications
+      </h2>
+
+      <p style="color:#5a7184; line-height:1.7; margin-top:0.5rem;">
+        Selected research contributions spanning microbiology, infectious diseases,
+        antimicrobial resistance, public health, and applied health research.
+      </p>
+    </div>
+
+
+    <!-- ================= PUBLISHED ================= -->
+    <h4 style="color:#003b6f; margin:1.5rem 0 0.8rem;">
+      <i class="fas fa-check-circle"></i> Published
+    </h4>
+
+    <!-- Publication 01 -->
+    <div class="research-item" style="border-left-color:#28a745;">
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+
+        <div style="flex:1;">
+          <span style="font-size:0.78rem; color:#6c8495; font-weight:600;">
+            PUBLICATION 01 · 2024
+          </span>
+
+          <h4 style="margin-top:0.3rem;">
+            Afolabi, C.O., &amp; Ogu, C.K. (2024)
+          </h4>
+        </div>
+
+        <span class="badge-status badge-published">
+          Published
+        </span>
+
+      </div>
+
+      <p style="line-height:1.7;">
+        Evaluation of Antimicrobial Susceptibility of
+        <em>Salmonella</em> Isolated from Household Cockroaches Using
+        <em>Carica papaya</em> Leaf Extract.
+      </p>
+
+      <p style="font-size:0.9rem; color:#3f647f; margin-bottom:0.4rem;">
+        <i class="fas fa-journal-whills"></i>
+        <em>International Journal of Research and Scientific Innovation</em>,
+        XI, 1077–1087.
+      </p>
+
+      <p style="font-size:0.85rem; color:#3f647f;">
+        <i class="fas fa-link"></i>
+        DOI:
+        <a href="https://doi.org/10.51244/IJRSI.2024.11110085"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#0077b6; font-weight:600;">
+          10.51244/IJRSI.2024.11110085
+        </a>
+      </p>
+
+    </div>
+
+
+    <!-- Publication 02 -->
+    <div class="research-item"
+         style="border-left-color:#17a2b8; margin-top:1rem;">
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+
+        <div style="flex:1;">
+          <span style="font-size:0.78rem; color:#6c8495; font-weight:600;">
+            PUBLICATION 02 · 2025
+          </span>
+
+          <h4 style="margin-top:0.3rem;">
+            Afolabi, C.O., Adekunle, J.D., Oyeniran, M.I., et al. (2025)
+          </h4>
+        </div>
+
+        <span class="badge-status badge-preprint">
+          Preprint
+        </span>
+
+      </div>
+
+      <p style="line-height:1.7;">
+        COVID-19 Origins: Quantifying Scientific Consensus Amid Political
+        Polarization Through Mixed-Methods Meta-Analysis.
+      </p>
+
+      <p style="font-size:0.9rem; color:#3f647f;">
+        <i class="fas fa-journal-whills"></i>
+        <em>medRxiv</em>
+      </p>
+
+      <p style="font-size:0.85rem; color:#3f647f;">
+        <i class="fas fa-link"></i>
+        DOI:
+        <a href="https://doi.org/10.1101/2025.06.06.25328995"
+           target="_blank"
+           rel="noopener noreferrer"
+           style="color:#0077b6; font-weight:600;">
+          10.1101/2025.06.06.25328995
+        </a>
+      </p>
+
+    </div>
+
+
+
+    <!-- ================= IN REVIEW ================= -->
+    <h4 style="color:#003b6f; margin:2rem 0 0.8rem;">
+      <i class="fas fa-hourglass-half"></i> In Review
+    </h4>
+
+
+    <!-- Publication 03 -->
+    <div class="research-item" style="border-left-color:#ffc107;">
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+
+        <div style="flex:1;">
+          <span style="font-size:0.78rem; color:#6c8495; font-weight:600;">
+            MANUSCRIPT · 2025
+          </span>
+
+          <h4 style="margin-top:0.3rem;">
+            Afolabi, C.O., Adekunle, J.D., Ogu, C.K.,
+            Adegboyega, T.I., Amos, A.A., &amp; Ojewale, I.F. (2025)
+          </h4>
+        </div>
+
+        <span class="badge-status badge-review">
+          In Review
+        </span>
+
+      </div>
+
+      <p style="line-height:1.7;">
+        Microbial Quality of Herbal Drink.
+      </p>
+
+      <p style="font-size:0.9rem; color:#3f647f;">
+        <i class="fas fa-journal-whills"></i>
+        <em>BMJ Microbiology</em>
+      </p>
+
+    </div>
+
+
+
+    <!-- ================= UNPUBLISHED ================= -->
+    <h4 style="color:#003b6f; margin:2rem 0 0.8rem;">
+      <i class="fas fa-file-alt"></i> Unpublished Research
+    </h4>
+
+
+    <!-- Unpublished 01 -->
+    <div class="research-item" style="border-left-color:#dc3545;">
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+
+        <div style="flex:1;">
+          <span style="font-size:0.78rem; color:#6c8495; font-weight:600;">
+            RESEARCH PROJECT · 2024
+          </span>
+
+          <h4 style="margin-top:0.3rem;">
+            Afolabi, C.O. (2024)
+          </h4>
+        </div>
+
+        <span class="badge-status badge-unpub">
+          Unpublished
+        </span>
+
+      </div>
+
+      <p style="line-height:1.7;">
+        A Case of Mastitis Caused by
+        <em>Staphylococcus aureus</em> Isolated from a Pus Sample
+        in a West African Dwarf Sheep.
+      </p>
+
+    </div>
+
+
+    <!-- Unpublished 02 -->
+    <div class="research-item"
+         style="border-left-color:#dc3545; margin-top:1rem;">
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+
+        <div style="flex:1;">
+          <span style="font-size:0.78rem; color:#6c8495; font-weight:600;">
+            RESEARCH PROJECT · 2024
+          </span>
+
+          <h4 style="margin-top:0.3rem;">
+            Afolabi, C.O. (2024)
+          </h4>
+        </div>
+
+        <span class="badge-status badge-unpub">
+          Unpublished
+        </span>
+
+      </div>
+
+      <p style="line-height:1.7;">
+        Exploring Microbial Contributions to the Degradation of Microplastics.
+      </p>
+
+    </div>
+
+
+
+    <!-- ================= IN PREPARATION ================= -->
+    <h4 style="color:#003b6f; margin:2rem 0 0.8rem;">
+      <i class="fas fa-pen-nib"></i> In Preparation
+    </h4>
+
+
+    <!-- Manuscript 01 -->
+    <div class="research-item" style="border-left-color:#007bff;">
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+
+        <div style="flex:1;">
+          <span style="font-size:0.78rem; color:#6c8495; font-weight:600;">
+            MANUSCRIPT · 2025
+          </span>
+
+          <h4 style="margin-top:0.3rem;">
+            Ogu, C.K., Afolabi, C.O., &amp; Adekunle, J.D. (2025)
+          </h4>
+        </div>
+
+        <span class="badge-status badge-prep">
+          In Preparation
+        </span>
+
+      </div>
+
+      <p style="line-height:1.7;">
+        Readmission of Diabetes Patients.
+      </p>
+
+    </div>
+
+
+    <!-- Manuscript 02 -->
+    <div class="research-item"
+         style="border-left-color:#007bff; margin-top:1rem;">
+
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; flex-wrap:wrap;">
+
+        <div style="flex:1;">
+          <span style="font-size:0.78rem; color:#6c8495; font-weight:600;">
+            MANUSCRIPT · 2025
+          </span>
+
+          <h4 style="margin-top:0.3rem;">
+            Afolabi, C.O. &amp; Adekunle, J.D. (2025)
+          </h4>
+        </div>
+
+        <span class="badge-status badge-prep">
+          In Preparation
+        </span>
+
+      </div>
+
+      <p style="line-height:1.7;">
+        A Study of the Awareness Rate of Breast Cancer and Breast
+        Self-Examination Among Female Students in the Federal University
+        of Agriculture.
+      </p>
+
+    </div>
+
+
+
+    <!-- ================= RESEARCH FOCUS ================= -->
+    <div style="
+      margin-top:2.5rem;
+      padding:1.2rem 1.4rem;
+      background:#f4f8fb;
+      border-left:4px solid #003b6f;
+      border-radius:8px;
+    ">
+
+      <h4 style="color:#003b6f; margin-bottom:0.5rem;">
+        <i class="fas fa-microscope"></i> Research Focus
+      </h4>
+
+      <p style="margin:0; color:#526b7d; line-height:1.7;">
+        Current research interests include microbiology, antimicrobial
+        susceptibility, infectious diseases, microbial ecology, public health,
+        and the application of research evidence to address emerging health
+        challenges.
+      </p>
+
+    </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT PAGE ================= -->
+
+<section id="page-contact" class="page-section">
+
+  <!-- Contact Header -->
+
+  <div class="card-panel">
+
+```
+<h2 class="section-title">
+  <i class="fas fa-address-card"></i> Contact &amp; Academic Profiles
+</h2>
+
+<p style="color:#5a7184; line-height:1.7; margin-bottom:1.8rem;">
+  For research collaboration, academic opportunities, professional enquiries,
+  or other scholarly engagements, Caroline can be reached through the channels
+  below. Academic profiles and researcher identifiers are also provided for
+  access to her research contributions and professional activities.
+</p>
+
+
+<!-- ================= DIRECT CONTACT ================= -->
+<h3 style="color:#003b6f; margin-bottom:1rem;">
+  <i class="fas fa-envelope"></i> Direct Contact
+</h3>
+
+<div class="contact-grid">
+
+  <!-- Email -->
+  <a href="mailto:afolabicaroline00@gmail.com"
+     class="contact-card">
+
+    <div class="contact-icon">
+      <i class="fas fa-envelope"></i>
+    </div>
+
+    <div>
+      <h4>Email</h4>
+      <p>afolabicaroline00@gmail.com</p>
+      <span>Send an Email →</span>
+    </div>
+
+  </a>
+
+
+  <!-- Phone -->
+  <a href="tel:+2348109089986"
+     class="contact-card">
+
+    <div class="contact-icon">
+      <i class="fas fa-phone"></i>
+    </div>
+
+    <div>
+      <h4>Phone</h4>
+      <p>+234 810 908 9986</p>
+      <span>Call →</span>
+    </div>
+
+  </a>
+
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/2348109089986"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-card">
+
+    <div class="contact-icon">
+      <i class="fab fa-whatsapp"></i>
+    </div>
+
+    <div>
+      <h4>WhatsApp</h4>
+      <p>+234 810 908 9986</p>
+      <span>Message on WhatsApp →</span>
+    </div>
+
+  </a>
+
+</div>
+
+
+<!-- ================= PROFESSIONAL NETWORKS ================= -->
+<h3 style="color:#003b6f; margin:2.2rem 0 1rem;">
+  <i class="fas fa-network-wired"></i> Professional Networks
+</h3>
+
+<div class="contact-grid">
+
+  <!-- LinkedIn -->
+  <a href="YOUR_LINKEDIN_LINK"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-card">
+
+    <div class="contact-icon linkedin">
+      <i class="fab fa-linkedin-in"></i>
+    </div>
+
+    <div>
+      <h4>LinkedIn</h4>
+      <p>Professional Profile</p>
+      <span>View LinkedIn →</span>
+    </div>
+
+  </a>
+
+
+  <!-- X / Twitter -->
+  <a href="YOUR_TWITTER_LINK"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-card">
+
+    <div class="contact-icon twitter">
+      <i class="fab fa-x-twitter"></i>
+    </div>
+
+    <div>
+      <h4>X (Twitter)</h4>
+      <p>Professional &amp; Research Updates</p>
+      <span>Visit Profile →</span>
+    </div>
+
+  </a>
+
+</div>
+
+
+<!-- ================= RESEARCH PROFILES ================= -->
+<h3 style="color:#003b6f; margin:2.2rem 0 1rem;">
+  <i class="fas fa-graduation-cap"></i> Research Profiles
+</h3>
+
+<div class="contact-grid">
+
+  <!-- Google Scholar -->
+  <a href="YOUR_GOOGLE_SCHOLAR_LINK"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-card">
+
+    <div class="contact-icon scholar">
+      <i class="fas fa-graduation-cap"></i>
+    </div>
+
+    <div>
+      <h4>Google Scholar</h4>
+      <p>Publications &amp; Citations</p>
+      <span>View Scholar Profile →</span>
+    </div>
+
+  </a>
+
+
+  <!-- ResearchGate -->
+  <a href="YOUR_RESEARCHGATE_LINK"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-card">
+
+    <div class="contact-icon researchgate">
+      <i class="fab fa-researchgate"></i>
+    </div>
+
+    <div>
+      <h4>ResearchGate</h4>
+      <p>Research &amp; Publications</p>
+      <span>View ResearchGate →</span>
+    </div>
+
+  </a>
+
+
+  <!-- ORCID -->
+  <a href="https://orcid.org/0009-0001-3478-3950"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-card">
+
+    <div class="contact-icon orcid-icon">
+      <i class="fab fa-orcid"></i>
+    </div>
+
+    <div>
+      <h4>ORCID</h4>
+      <p>0009-0001-3478-3950</p>
+      <span>View ORCID Record →</span>
+    </div>
+
+  </a>
+
+</div>
+
+
+<!-- ================= OTHER RESEARCH IDENTIFIERS ================= -->
+<h3 style="color:#003b6f; margin:2.2rem 0 1rem;">
+  <i class="fas fa-fingerprint"></i> Research &amp; Scholarly Identifiers
+</h3>
+
+<div class="contact-grid">
+
+  <!-- Scopus -->
+  <a href="YOUR_SCOPUS_LINK"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-card">
+
+    <div class="contact-icon">
+      <i class="fas fa-book"></i>
+    </div>
+
+    <div>
+      <h4>Scopus</h4>
+      <p>Author Profile</p>
+      <span>View Scopus Profile →</span>
+    </div>
+
+  </a>
+
+
+  <!-- Web of Science -->
+  <a href="YOUR_WEB_OF_SCIENCE_LINK"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-card">
+
+    <div class="contact-icon">
+      <i class="fas fa-database"></i>
+    </div>
+
+    <div>
+      <h4>Web of Science</h4>
+      <p>Researcher Profile</p>
+      <span>View Profile →</span>
+    </div>
+
+  </a>
+
+
+  <!-- Academia -->
+  <a href="YOUR_ACADEMIA_LINK"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="contact-card">
+
+    <div class="contact-icon">
+      <i class="fas fa-university"></i>
+    </div>
+
+    <div>
+      <h4>Academia</h4>
+      <p>Academic Profile</p>
+      <span>View Profile →</span>
+    </div>
+
+  </a>
+
+</div>
+
+
+<!-- ================= LOCATION ================= -->
+<div class="contact-location">
+
+  <div>
+    <i class="fas fa-map-marker-alt"></i>
+  </div>
+
+  <div>
+    <h3>Location</h3>
+    <p>Ogijo, Ogun State, Nigeria</p>
+    <span>Available for academic and research collaborations.</span>
+  </div>
+
+</div>
+
+
+<!-- ================= COLLABORATION CTA ================= -->
+<div class="contact-cta">
+
+  <div class="contact-cta-icon">
+    <i class="fas fa-handshake"></i>
+  </div>
+
+  <div>
+    <h3>Interested in Collaboration?</h3>
+
+    <p>
+      Caroline welcomes opportunities for research collaboration,
+      epidemiological studies, microbiological research, public health
+      projects, academic networking, and evidence-based health research.
+    </p>
+
+    <a href="mailto:afolabicaroline00@gmail.com"
+       class="contact-button">
+      <i class="fas fa-paper-plane"></i>
+      Get in Touch
+    </a>
+  </div>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+  <!-- ================= UPDATES PAGE ================= -->
+  <section id="page-updates" class="page-section">
+    <div class="card-panel">
+      <h2 class="section-title"><i class="fas fa-newspaper"></i> News &amp; Updates</h2>
+      <div class="news-timeline">
+        <div class="news-card">
+          <div class="date"><i class="far fa-calendar-alt"></i> June 2025</div>
+          <h4>Preprint published: COVID-19 Origins meta-analysis</h4>
+          <p>Co-authored "COVID-19 Origins: Quantifying Scientific Consensus Amid Political Polarization" on medRxiv. Mixed-methods meta-analysis examining scientific consensus amid political polarization.</p>
+        </div>
+        <div class="news-card">
+          <div class="date"><i class="far fa-calendar-alt"></i> May 2025</div>
+          <h4>In Review: Microbial quality of herbal drinks</h4>
+          <p>Manuscript submitted to BMJ Microbiology – examining safety of commercial herbal products in Nigeria.</p>
+        </div>
+        <div class="news-card">
+          <div class="date"><i class="far fa-calendar-alt"></i> April 2025</div>
+          <h4>NYSC Medical Laboratory Assistant – Ebonyi State</h4>
+          <p>Served at NYSC Orientation Camp providing diagnostic support for corps members, performing RDTs, urinalysis, and blood glucose tests.</p>
+        </div>
+        <div class="news-card">
+          <div class="date"><i class="far fa-calendar-alt"></i> March 2025</div>
+          <h4>Kolabtree Top-Rated Freelancer</h4>
+          <p>Completed metataxonomic analyses of pulmonary <em>Metamycoplasma salivarium</em>, <em>Klebsiella pneumoniae</em>, and <em>Prevotella oris</em> sequence variants.</p>
+        </div>
+        <div class="news-card">
+          <div class="date"><i class="far fa-calendar-alt"></i> 2024</div>
+          <h4>Publication: Antimicrobial activity of <em>Carica papaya</em></h4>
+          <p>Published in International Journal of Research and Scientific Innovation (IJRSI) – evaluating <em>Salmonella</em> susceptibility from household cockroaches.</p>
+        </div>
+        <div class="news-card">
+          <div class="date"><i class="far fa-calendar-alt"></i> 2024</div>
+          <h4>First-Class Honours in Microbiology</h4>
+          <p>Graduated with CGPA 4.50/5.00 from Federal University of Agriculture, Abeokuta. Thesis: "Microbial quality of herbs" under supervision of Professor Flora Oluwafemi.</p>
+        </div>
+        <div class="news-card">
+          <div class="date"><i class="far fa-calendar-alt"></i> 2022–2023</div>
+          <h4>Student Industrial Training – Veterinary Teaching Hospital</h4>
+          <p>Gained extensive laboratory experience in microbiology research, biochemical assays, and antimicrobial susceptibility testing at FUNAAB.</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-panel" style="text-align:center; background:#f0f8ff;">
+      <p><i class="fas fa-rss" style="color:#003b6f;"></i> Follow for updates: 
+        <a href="#" style="color:#003b6f; font-weight:600;">LinkedIn</a> · 
+        <a href="#" style="color:#003b6f; font-weight:600;">ResearchGate</a> · 
+        <a href="#" style="color:#003b6f; font-weight:600;">Google Scholar</a>
+      </p>
+      <p style="margin-top:0.5rem; font-size:0.9rem; color:#3f647f;">
+        <i class="fas fa-envelope"></i> afolabicaroline00@gmail.com · 
+        <i class="fas fa-phone"></i> +234 810 908 9986 · 
+        <i class="fab fa-orcid orcid"></i> ORCID: 0009-0001-3478-3950
+      </p>
+    </div>
+  </section>
+
+</div>
+
+<footer class="site-footer">
+  <p>
+    <i class="fas fa-flask"></i> Caroline Olamojiba Afolabi · Microbiology · Epidemiology · Public Health 
+    <span style="margin:0 10px;">|</span> 
+    <i class="fas fa-copyright"></i> 2026 
+  </p>
+</footer>
+
+<script>
+  (function() {
+
+    const navLinks = document.querySelectorAll('#mainNav a');
+
+    const pages = {
+      home: document.getElementById('page-home'),
+      certificates: document.getElementById('page-certificates'),
+      research: document.getElementById('page-research'),
+      publications: document.getElementById('page-publication'),
+       contact: document.getElementById('page-contact'),
+      updates: document.getElementById('page-updates')
+    };
+
+    function showPage(pageId) {
+
+      // Hide all pages
+      Object.values(pages).forEach(page => {
+        if (page) {
+          page.classList.remove('active-page');
+        }
+      });
+
+      // Show selected page
+      if (pages[pageId]) {
+        pages[pageId].classList.add('active-page');
+      }
+
+      // Update active navigation button
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+      });
+
+      const activeLink = document.querySelector(
+        `#mainNav a[data-page="${pageId}"]`
+      );
+
+      if (activeLink) {
+        activeLink.classList.add('active');
+      }
+    }
+
+    // Navigation click
+    navLinks.forEach(link => {
+
+      link.addEventListener('click', function(e) {
+
+        e.preventDefault();
+
+        const page = this.dataset.page;
+
+        if (page && pages[page]) {
+
+          showPage(page);
+
+          history.pushState(
+            null,
+            '',
+            '#' + page
+          );
+
+          // Scroll to top
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+
+      });
+
+    });
+
+    // Load page from URL hash
+    const hash = window.location.hash.replace('#', '');
+
+    if (hash && pages[hash]) {
+      showPage(hash);
+    } else {
+      showPage('home');
+    }
+
+    // Handle browser back/forward
+    window.addEventListener('popstate', function() {
+
+      const currentHash = window.location.hash.replace('#', '');
+
+      if (currentHash && pages[currentHash]) {
+        showPage(currentHash);
+      } else {
+        showPage('home');
+      }
+
+    });
+
+  })();
+</script>
+</body>
+</html>
